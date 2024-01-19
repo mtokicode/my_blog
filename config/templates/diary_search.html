@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<search>
+<form action="">
+<input type="search" name="k">
+<input type="submit" value="検索">
+</form>
+</search>
+
+
+
+
+
+{% for object in search_result %}
+
+
+<div class="card my-3">
+ <h5 class="card-title">{{object.title}}</h5>
+<p class="card-text">  {{object.create_at|date:"Y/m/d(D)" }}  </p>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}
+
